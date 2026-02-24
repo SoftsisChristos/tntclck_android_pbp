@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Tentoclock</string>
+    <string name="activity_label_people">People</string>
+    <string name="activity_label_home">Home</string>
+    <string name="btn_goToPeople">People</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pTxt_onoma">Όνομα</string>
+    <string name="pTxt_email">Email</string>
+    <string name="pTxt_kinhto">Κινητό</string>
+    <string name="pTxt_eponymo">Επώνυμο</string>
+    <string name="pTxt_odos">Οδός</string>
+    <string name="button_add_customer">ΠΡΟΣΘΗΚΗ ΝΕΟΥ ΠΕΛΑΤΗ</string>
+    <string name="image_holder_for_customer">image holder for customer</string>
+
+    <!--    Activity: "Customer Details" Strings-->
+    <string name="customer_details">Customer Details</string>
+    <string name="first_name">Όνομα</string>
+    <string name="enter_first_name">Εισάγετε Όνομα</string>
+    <string name="last_name">Επώνυμο</string>
+    <string name="enter_last_name">Εισάγετε Επώνυμο</string>
+    <string name="email">Email</string>
+    <string name="enter_email">Εισάγετε Email</string>
+    <string name="phone_number">Τηλέφωνο Επικοινωνίας</string>
+    <string name="enter_phone_number">Εισάγετε Τηλέφωνο Επικοινωνίας</string>
+    <string name="street_address">Διεύθυνση</string>
+    <string name="enter_street_address">Εισάγετε Διεύθυνση</string>
+    <string name="area">Περιοχή</string>
+    <string name="enter_area">Εισάγετε Περιοχή</string>
+    <string name="postal_code">Ταχυδρομικός Κώδικας</string>
+    <string name="enter_postal_code">Εισάγετε Ταχυδρομικό Κώδικα</string>
+    <string name="floor">Όροφος</string>
+    <string name="enter_floor">Εισάγετε Όροφο</string>
+    <string name="bell">Κουδούνι</string>
+    <string name="enter_bell">Εισάγετε Κουδούνι</string>
+    <string name="delete">ΔΙΑΓΡΑΦΗ ΠΕΛΑΤΗ</string>
+    <string name="update">ΕΝΗΜΕΡΩΣΗ ΣΤΟΙΧΕΙΩΝ</string>
+
+
+    <string name="partners">Partners</string>
+    <string name="pania">Pania</string>
+    <string name="add_appointment">Add Appointment</string>
+
+    <string-array name="planets_array">
+        <item>restart</item>
+        <item>zero</item>
+        <item>maxblock</item>
+        <item>aeroblock</item>
+        <item>skyblock</item>
+        <item>HYbrid</item>
+        <item>novaplus</item>
+        <item>reflex</item>
+        <item>novaJET</item>
+        <item>reflex special colors</item>
+        <item>novacryl</item>
+        <item>ΠΟΛΥΕΣΤΕΡΙΚΑ ΕΜΠΡΙΜΕ</item>
+        <!-- Add more items as needed -->
+    </string-array>
+
+    <string-array name="nyfan">
+        <item>PERLA</item>
+        <item>Block Sun 100%</item>
+        <item>SOLID</item>
+        <item>EARTH COLLECTION</item>
+        <item>DIGITAL PRINTS</item>
+        <item>SCREEN PVC</item>
+        <item>BLACKOUT PVC</item>
+        <item>CANVAS</item>
+        <item>ROMVOS</item>
+        <item>SOLID PVC / 680gr</item>
+        <item>SOLID PVC / 500gr</item>
+        <item>Achilles Clear PVC Films</item>
+        <item>Architectural Shade Sails</item>
+        <item>Καποτιν</item>
+        <item>ΠΟΛΥΕΣΤΕΡΙΚΑ ΕΜΠΡΙΜΕ</item>
+        <!-- Add more items as needed -->
+    </string-array>
+
+</resources>

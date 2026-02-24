@@ -1,0 +1,15 @@
+local.properties
+**/google-services.json
+keystore.properties
+*.jks
+*.keystore
+.gradle/
+**/build/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+**/*.apk
+**/*.aab
+**/output-metadata.json
+**/baselineProfiles/

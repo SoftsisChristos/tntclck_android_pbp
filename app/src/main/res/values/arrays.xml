@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mhkh_manivelas">
+        <item>1.20μ</item>
+        <item>1.60μ</item>
+        <item>1.80μ</item>
+        <item>2.00μ</item>
+        <item>2.20μ</item>
+        <item>2.40μ</item>
+        <item>2.60μ</item>
+        <item>2.80μ</item>
+        <item>3.00μ</item>
+    </string-array>
+
+    <string-array name="eidh_antivarwn">
+        <item>Α/Α ΟΒΑΛ</item>
+        <item>Α/Α ΟΒΑΛ ΕΝΙΣΧΥΜΕΝΟ</item>
+        <item>Α/Α ΤΕΤΡΑΓΩΝΟ</item>
+        <item>ΘΗΚΗ 1 inch</item>
+        <item>ΘΗΚΗ 1 &#188; inch </item>
+        <item>Α/Α ΒΑΡΕΩΣ ΤΥΠΟΥ</item>
+        <item>Α/Α ΒΑΡΕΩΣ ΤΥΠΟΥ ΜΕ ΥΔΡΟΡΟΗ</item>
+    </string-array>
+
+    <string-array name="glosses">
+        <item>ΙΣΙΑ</item>
+        <item>ΚΥΜΑΤΙΣΤΗ</item>
+        <item>ΤΕΤΡΑΓΩΝΗ-ΜΕΑΝΔΡΟΣ</item>
+        <item>ΧΩΡΙΣ</item>
+    </string-array>
+
+    <string-array name="vraxiones">
+        <item>1.50</item>
+        <item>1.75</item>
+        <item>2.00</item>
+        <item>2.25</item>
+        <item>2.50</item>
+        <item>2.75</item>
+        <item>3.00</item>
+        <item>3.25</item>
+        <item>3.50</item>
+        <item>3.75</item>
+        <item>4.00</item>
+        <item>4.25</item>
+        <item>4.50</item>
+        <item>4.75</item>
+        <item>5.00</item>
+    </string-array>
+
+</resources>

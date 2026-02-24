@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_background"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Τίτλος -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="20dp"
+            android:text="@string/customer_details"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Πεδίο για Όνομα -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/first_name"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtview_firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="ονομα πελατη"
+            android:background="@drawable/edit_text_bg"
+            android:hint="@string/enter_first_name"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="#546E7A"
+            android:textSize="16sp" />
+
+        <!-- Πεδίο για Επίθετο -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/last_name"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtview_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="επιθετο πελατη"
+            android:background="@drawable/edit_text_bg"
+            android:hint="@string/enter_last_name"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="#546E7A"
+            android:textSize="16sp" />
+
+        <!-- Πεδίο για Email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/email"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtview_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="email πελατη"
+            android:background="@drawable/edit_text_bg"
+            android:hint="@string/enter_email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="#546E7A"
+            android:textSize="16sp" />
+
+        <!-- Πεδίο για Κινητό -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/phone_number"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtview_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="κινητο τηλεφωνο πελατη"
+            android:background="@drawable/edit_text_bg"
+            android:hint="@string/enter_phone_number"
+            android:inputType="phone"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="#546E7A"
+            android:textSize="16sp" />
+
+        <!-- Πεδίο για Διεύθυνση -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/street_address"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtview_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="οδος πελατη"
+            android:background="@drawable/edit_text_bg"
+            android:hint="@string/enter_street_address"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="#546E7A"
+            android:textSize="16sp" />
+
+        <!-- Πεδίο για Περιοχή -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/area"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtview_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="περιοχη πελατη"
+            android:background="@drawable/edit_text_bg"
+            android:hint="@string/enter_area"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="#546E7A"
+            android:textSize="16sp" />
+
+        <!-- Πεδίο για ΤΚ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/postal_code"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtview_pc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="ταχυδρομικος κωδικας πελατη"
+            android:background="@drawable/edit_text_bg"
+            android:hint="@string/enter_postal_code"
+            android:inputType="textPostalAddress"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="#546E7A"
+            android:textSize="16sp" />
+
+        <!-- Πεδίο για Όροφο -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/floor"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtview_floor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="οροφος πελατη"
+            android:background="@drawable/edit_text_bg"
+            android:hint="@string/enter_floor"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="#546E7A"
+            android:textSize="16sp" />
+
+        <!-- Πεδίο για Κουδούνι -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/bell"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtview_bell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="κουδουνι πελατη"
+            android:background="@drawable/edit_text_bg"
+            android:hint="@string/enter_bell"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="#546E7A"
+            android:textSize="16sp" />
+
+        <!-- Κουμπιά για Διαγραφή και Update -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Κουμπί Διαγραφής -->
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#E53935"
+                android:padding="12dp"
+                android:text="@string/delete"
+                android:textColor="#FFFFFF" />
+
+            <!-- Κουμπί Ενημέρωσης -->
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#43A047"
+                android:padding="12dp"
+                android:text="@string/update"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

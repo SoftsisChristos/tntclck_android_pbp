@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="6dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_partner"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/img_customer_profile_round"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/darkOrange"
+            android:contentDescription="Image holder for customer"/>
+
+        <TextView
+            android:id="@+id/partnerCard_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lastname"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/img_partner"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/partnerCard_firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Firstname"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/img_partner"
+            android:layout_below="@id/partnerCard_lastname"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/partnerCard_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/img_partner"
+            android:layout_below="@id/partnerCard_firstname"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/partnerCard_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/partnerCard_email"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/img_partner"
+            android:text="Phone"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

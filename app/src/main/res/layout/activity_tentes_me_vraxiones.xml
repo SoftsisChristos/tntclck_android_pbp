@@ -1,0 +1,743 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rootLayout2"
+        android:layout_height="wrap_content"
+        android:background="#f5f5f5"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Process name: Τέντα με βραχίονες -->
+        <TextView
+            android:id="@+id/process_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Τέντα Με Βραχίονες"
+            android:textColor="#000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Γραμμή Διαχώρισης -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#D3D3D3" />
+
+        <!-- Input fields for Balcony Length and Height -->
+        <EditText
+            android:id="@+id/balcony_length"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:hint="Μήκος μπαλκονιού (σε μέτρα)"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:textColorHint="#DD2C00"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/height_from_ceiling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_background"
+            android:hint="Ύψος από ταβάνι μέχρι κάγκελο (σε μέτρα)"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:textColorHint="#DD2C00"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Άξονας -->
+            <TextView
+                android:id="@+id/axonas_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="70dp"
+                android:paddingTop="12dp"
+                android:text="Άξονας:"
+                android:textSize="16sp" />
+
+            <!-- Μήκος Πανιού -->
+            <TextView
+                android:id="@+id/pani_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/axonas_length"
+                android:paddingTop="12dp"
+                android:text="Μήκος Πανιού: "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/antivaro_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/axonas_length"
+                android:paddingTop="12dp"
+                android:text="Αντίβαρο Μήκος: "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/vraxiones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/antivaro_length"
+                android:layout_marginTop="0dp"
+                android:paddingTop="12dp"
+                android:text="Βραχίονες: "
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/katevasma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/antivaro_length"
+                android:layout_toEndOf="@id/antivaro_length"
+                android:paddingTop="12dp"
+                android:text="Κατέβασμα: "
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <!-- Γραμμή Διαχώρισης -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#D3D3D3" />
+
+        <!-- ΕΙΔΟΣ ΑΞΟΝΑ -->
+        <TextView
+            android:id="@+id/tv_axis_type_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Είδος Άξονα Σωλήνα"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+        <!-- Axis Type Selection (Φ48, Φ60, Φ70, Φ85) -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/axis_type_chipgroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:chipSpacingHorizontal="8dp"
+            app:chipSpacingVertical="4dp"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_48"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Φ48" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_60"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Φ60" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_70"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Φ70" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_85"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Φ85" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Γραμμή Διαχώρισης -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#D3D3D3" />
+
+        <TextView
+            android:id="@+id/tv_eidosXeirismou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Είδος Χειρισμού"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <!-- Επιλογές για Αυτόματο ή Χειροκίνητο -->
+        <RadioGroup
+            android:id="@+id/radioGroupMechanism"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioButtonMotor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Μοτέρ" />
+
+            <RadioButton
+                android:id="@+id/radioButtonManual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Χειροκίνητος μηχανισμός (Μανιβέλα)" />
+        </RadioGroup>
+
+        <!-- Επιλογές για Αυτόματο Μηχανισμό -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupAutomatic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:singleSelection="false">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSwitch"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Με διακόπτη" />
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTilexeiristhrio"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Με τηλεχειριστήριο" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipManivela"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Με μανιβέλα" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/label_crank_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="6dp"
+            android:text="Μήκος Μανιβέλας:"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <Spinner
+            android:id="@+id/crank_length_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:entries="@array/mhkh_manivelas"
+            android:visibility="gone" />
+
+        <!-- Γραμμή Διαχώρισης -->
+        <View
+            android:id="@+id/diaxoristiko10"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#D3D3D3"
+            android:visibility="gone" />
+
+        <!-- ΙΣΧΥΣ ΜΟΤΕΡ -->
+        <TextView
+            android:id="@+id/tv_moter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ισχύς Μοτέρ: "
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+
+        <!-- Motor Power (30n/m, 50n/m, 80n/m, 100n/m, 120n/m) -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipgroup_moter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            app:chipSpacingHorizontal="8dp"
+            app:chipSpacingVertical="4dp"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_moter30"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30N/M" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_moter50"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="50N/M" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_moter80"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="80N/M" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_moter100"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100N/M" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_moter120"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120N/M" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Γραμμή Διαχώρισης -->
+        <View
+            android:id="@+id/diaxoristiko"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#D3D3D3" />
+
+        <TextView
+            android:id="@+id/label_antivaro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Είδος Αντιβαρου:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+        <Spinner
+            android:id="@+id/spinner_antivara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/eidh_antivarwn"
+            android:minHeight="48dp"
+            android:visibility="visible" />
+
+        <!-- Γραμμή Διαχώρισης -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#D3D3D3" />
+
+        <TextView
+            android:id="@+id/text_view_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Είδος Γλώσσας:"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spinner_glosses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/glosses"
+            android:minHeight="48dp"
+            android:visibility="visible" />
+
+        <!-- Γραμμή Διαχώρισης -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#D3D3D3" />
+        <!-- Γραμμή Διαχώρισης -->
+
+        <TextView
+            android:id="@+id/label_vraxionasMhkos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="Μήκος Βραχίονα:"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spinner_vraxiones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/vraxiones"
+            android:minHeight="48dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/label_eidosVraxiona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="Είδος Βραχίονα:"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <RadioGroup
+            android:id="@+id/rg_eidosVraxiona"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_isios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="ΙΣΙΟΣ" />
+
+            <RadioButton
+                android:id="@+id/rb_loksos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ΛΟΞΟΣ" />
+
+            <RadioButton
+                android:id="@+id/rb_vraxionasVaris"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="ΒΑΡΕΩΣ ΤΥΠΟΥ" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/label_merosVraxiona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="Τοποθέτηση Βραχίονα:"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup_merosVraxiona"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_mesa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="ΜΕΣΑ" />
+
+            <RadioButton
+                android:id="@+id/rb_eksw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ΕΞΩ" />
+        </RadioGroup>
+
+
+        <!-- Γραμμή Διαχώρισης -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#D3D3D3" />
+        <!-- Γραμμή Διαχώρισης -->
+
+        <TextView
+            android:id="@+id/label_kodikosPaniou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="Κωδικός Πανιού:"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+        <Spinner
+            android:id="@+id/pamphlets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:visibility="visible" />
+
+        <!-- AutoCompleteTextView για τον κωδικό πανιού -->
+        <AutoCompleteTextView
+            android:id="@+id/fabricCodeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:completionThreshold="1"
+            android:hint="Εισάγετε τον κωδικό πανιού"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="8dp" />
+
+        <!-- CardView για την εμφάνιση λεπτομερειών του επιλεγμένου πανιού -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fabricDetailCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/fabricName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Όνομα Πανιού"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fabricBrand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Μάρκα: Skyblock" />
+
+                <!-- Διαθέσιμα Χρώματα -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Διαθέσιμα Χρώματα:" />
+
+                <!-- ChipGroup για τα χρώματα -->
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupColors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    app:chipSpacingHorizontal="8dp"
+                    app:chipSpacingVertical="4dp"
+                    app:singleSelection="true">
+
+                </com.google.android.material.chip.ChipGroup>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Γραμμή Διαχώρισης -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#D3D3D3" />
+        <!-- Γραμμή Διαχώρισης -->
+
+        <LinearLayout
+            android:id="@+id/extra_services_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Εξτρα Υπηρεσίες"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/arrow_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:src="@drawable/baseline_arrow_down" />
+        </LinearLayout>
+
+        <!-- Το LinearLayout που περιέχει τις επιλογές υπηρεσιών, το οποίο αρχικά είναι κρυφό -->
+        <LinearLayout
+            android:id="@+id/extraYphresies_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- Προσθήκη των υπηρεσιών εδώ -->
+            <CheckBox
+                android:id="@+id/checkbox_diploKouzineto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Διπλό Κουζινέτο" />
+
+            <CheckBox
+                android:id="@+id/checkbox_oneInchKouzineto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Κουζινέτο 1-inch (Θηλυκό)" />
+
+            <CheckBox
+                android:id="@+id/checkbox_vaseisToixou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Βάσεις για τοίχο" />
+
+            <CheckBox
+                android:id="@+id/checkbox_vaseisMakries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Βάσεις μακριές (μπανάνα)" />
+
+            <CheckBox
+                android:id="@+id/checkbox_poliKanalo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Πολυκάναλο Τηλεκοντρόλ" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox_smart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Smart Control" />
+
+                <!-- RadioGroup για τις επιλογές παλιο και καινουργιο -->
+                <RadioGroup
+                    android:id="@+id/rg_smartHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButton_smartPalio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text="ΠΑΛΙΟ" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton_smartKainourgio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text="ΚΑΙΝΟΥΡΓΙΟ" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/hufta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Χούφτα" />
+
+                <!-- RadioGroup για τις επιλογές F48 και F70 -->
+                <RadioGroup
+                    android:id="@+id/radioGroup_hufta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButton_f48"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text="F48" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton_f70"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text="F70" />
+                </RadioGroup>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Γραμμή Διαχώρισης -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#D3D3D3" />
+
+        <Button
+            android:id="@+id/button_prosthiki"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="ΠΡΟΣΘΗΚΗ" />
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/fragment_container2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>
+

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="6dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imgPani"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/img_customer_profile_round"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/darkOrange"/>
+
+        <TextView
+            android:id="@+id/codePani"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Code"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/imgPani"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/namePani"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/imgPani"
+            android:layout_below="@id/codePani"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/seriesPani"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Series"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/imgPani"
+            android:layout_below="@id/namePani"
+            android:layout_marginStart="10dp"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/colorsPani"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seriesPani"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/imgPani"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:chipSpacingVertical="-6dp"
+            app:ensureMinTouchTargetSize="false" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
